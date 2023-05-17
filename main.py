@@ -34,6 +34,14 @@ class Hospital:
         ButtonFrame = Frame(self.root,bd=20,relief=RIDGE)
         ButtonFrame.place(x=0,y=600,width=1530,height=190)
 
+        #===============================================Data Frame Left=================
+        lblNameTablet = Label(DataFrameLeft,text="Name of tablet",font=("times new roman",12,"bold"),padx=2,pady=6)
+        lblNameTablet.grid(row=0,column=0)
+
+        comNameTablet = ttk.Combobox(DataFrameLeft,font=("times new roman",12,"bold"),width=33)
+        comNameTablet["values"] = ("Nice","Corona Vaccine","Acetaminophen","Adderall","Almodipine","Ativan")
+        comNameTablet.grid(row=0,column=1)
+
 
 root = Tk()
 ob = Hospital(root)
