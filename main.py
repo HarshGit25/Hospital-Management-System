@@ -36,11 +36,17 @@ class Hospital:
 
         #===============================================Data Frame Left=================
         lblNameTablet = Label(DataFrameLeft,text="Name of tablet",font=("times new roman",12,"bold"),padx=2,pady=6)
-        lblNameTablet.grid(row=0,column=0)
+        lblNameTablet.grid(row=0,column=0,sticky=W)
 
         comNameTablet = ttk.Combobox(DataFrameLeft,font=("times new roman",12,"bold"),width=33)
         comNameTablet["values"] = ("Nice","Corona Vaccine","Acetaminophen","Adderall","Almodipine","Ativan")
         comNameTablet.grid(row=0,column=1)
+
+        lblDose = Label(DataFrameLeft,text="Dosage",font=("times new roman",12,"bold"),padx=2,pady=6)
+        lblDose.grid(row=1,column=0,sticky=W)
+
+        lblNoOfTablet = Label(DataFrameLeft,text="No. of Tablet",font=("times new roman",12,"bold"),padx=2,pady=6)
+        lblNoOfTablet.grid(row=2,column=0,sticky=W)
 
 
 root = Tk()
